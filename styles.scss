@@ -1,0 +1,28 @@
+.container,
+.timer-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#time {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.square {
+  background-color: lightcoral;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+}
+
+.circle {
+  background-color: lightgreen;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
