@@ -1,19 +1,25 @@
-.container,
-.timer-ctr {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#time {
+.timer-ctr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 500px;
+}
+.timer-ctr #time,
+.timer-ctr label {
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .square {
   background-color: lightcoral;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +28,7 @@
 
 .circle {
   background-color: lightgreen;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 }/*# sourceMappingURL=styles.css.map */
