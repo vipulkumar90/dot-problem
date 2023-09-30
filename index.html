@@ -7,15 +7,31 @@
     <title>Dot Problem</title>
   </head>
   <body>
-    <div class="timer-ctr">
-      <p id="time"></p>
-      <div id="grid-ddl">
-        <label for="grid-size"> Choose Size: </label>
-        <select name="grid-size" id="grid-size"></select>
+    <div class="main-ctr">
+      <div class="left">
+        <table>
+          <thead>
+            <tr>
+              <th>Round</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class="right">
+        <div class="timer-ctr">
+          <p id="time"></p>
+          <div id="grid-ddl">
+            <label for="grid-size"> Choose Size: </label>
+            <select name="grid-size" id="grid-size"></select>
+          </div>
+        </div>
+        <div class="container" id="cntr"></div>
       </div>
     </div>
-    <div class="container" id="cntr"></div>
 
+    <p id="start-game">Choose a size to start the game!</p>
     <script src="script.js"></script>
   </body>
 </html>

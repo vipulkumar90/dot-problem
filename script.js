@@ -1,17 +1,19 @@
 var size = 10;
-var startTime = 0;
+var startTime = Date.now();
 var endTime = 0;
+var round = 1;
 function displayCircle(n) {
+  document.getElementById("start-game").hidden = true;
   hideAllCircle(n);
   getAllSquare(n);
   var row = Math.floor(Math.random() * n) + 1;
   var col = Math.floor(Math.random() * n) + 1;
-
+  setInterval(function () {
+    var time = ((Date.now() - startTime) / 1000).toFixed(1);
+    document.getElementById("time").innerText =
+      String(time >= 0 ? time : 0) + "sec";
+  }, 1);
   document.getElementById(String(row) + String(col) + "crl").hidden = false;
-  document.getElementById("time").innerText =
-    String(
-      (endTime - startTime) / 1000 >= 0 ? (endTime - startTime) / 1000 : 0
-    ) + "sec";
   startTime = Date.now();
 }
 
@@ -34,6 +36,7 @@ function getAllSquare(n) {
               .hidden === false
           ) {
             endTime = Date.now();
+            addScore(startTime);
             displayCircle(n);
           }
         });
@@ -79,6 +82,19 @@ function createDdl(n) {
     option.text = `${i}`;
     select.appendChild(option);
   }
+}
+
+function addScore(startTime) {
+  var tbody = document.getElementById("tbody");
+  var tr = document.createElement("tr");
+  var tdRound = document.createElement("td");
+  var tdTime = document.createElement("td");
+  tdRound.innerText = round;
+  round += 1;
+  tdTime.innerText = ((Date.now() - startTime) / 1000).toFixed(1);
+  tr.appendChild(tdRound);
+  tr.appendChild(tdTime);
+  tbody.appendChild(tr);
 }
 
 var select = document.getElementById("grid-size");

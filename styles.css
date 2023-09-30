@@ -1,14 +1,26 @@
+.main-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+#start-game {
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
 .timer-ctr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 500px;
+  padding: 0px 100px;
 }
 .timer-ctr #time,
 .timer-ctr label {
